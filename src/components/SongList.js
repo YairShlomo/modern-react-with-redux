@@ -5,12 +5,12 @@ import { selectSong } from "../actions";
 class SongList extends Component {
   renderList() {
     //return a array of GSX objects
-    return this.props.songs.map((song) => {
+    return this.props.songs.map(song => {
       //return GSX for the mapping func
       return (
         <div className="item" key={song.title}>
           <div className="right floated content">
-            <button className="ui button primary" onClick={() => this.props.selectSong}>
+            <button className="ui button primary" onClick={() => this.props.selectSong(song)}>
               Select
             </button>
           </div>
