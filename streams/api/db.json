@@ -1,21 +1,10 @@
 {
   "streams": [
     {
-      "title": "My stream",
-      "description": "great 1",
-      "id": 1
-    },
-    {
       "title": "my second",
       "description": "with userId",
       "userId": "105981244961485923296",
       "id": 2
-    },
-    {
-      "title": "history create",
-      "description": "push1",
-      "userId": "105981244961485923296",
-      "id": 3
     }
   ]
 }
