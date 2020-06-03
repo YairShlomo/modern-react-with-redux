@@ -14,7 +14,7 @@ export class LanguageStore extends React.Component {
       <Context.Provider
         value={{ ...this.state, onLanguageChange: this.onLanguageChange }}
       >
-        {this.props.children}>
+        {this.props.children}
       </Context.Provider>
     );
   }
