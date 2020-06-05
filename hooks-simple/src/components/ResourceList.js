@@ -5,17 +5,22 @@ const ResourceList = ({ resource }) => {
   const [resources, setResources] = useState([]);
 
   useEffect(() => {
-    () => {
-      (async (resource) => {
-        const response = await axios.get(
-          `http://jsonplaceholder.typicode.com/${resource}`
-        );
+    (async (resource) => {
+      const response = await axios.get(
+        `http://jsonplaceholder.typicode.com/${resource}`
+      );
 
-        setResources(response.data);
-      })(resource);
-    };
+      setResources(response.data);
+    })(resource);
   }, [resource]);
-  return <div>{resources.length}</div>;
+
+  return (
+    <ul>
+      {resources.map((record) => (
+        <li key={record.id}>{record.title}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default ResourceList;
